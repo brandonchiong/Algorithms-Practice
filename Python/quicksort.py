@@ -12,3 +12,12 @@ def partition(array, left, right):
             right -= 1
 
     return left
+
+def quicksort(array, start=0, end=None):
+    if end is None:
+        end = len(array) - 1
+    if start >= end:
+        return
+    pivot = partition(array, start, end)
+    quicksort(array, start, pivot - 1)
+    quicksort(array, pivot, end)
