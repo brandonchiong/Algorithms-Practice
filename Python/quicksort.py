@@ -21,3 +21,11 @@ def quicksort(array, start=0, end=None):
     pivot = partition(array, start, end)
     quicksort(array, start, pivot - 1)
     quicksort(array, pivot, end)
+
+example = [8, 3, 6, 1, 2, 7, 9, 5, 4]
+quicksort(example)
+print(example)
+
+example2 = [245, 92, 3, 42, 875, 54, 128, 999, 17, 88]
+quicksort(example2)
+print(example2)
